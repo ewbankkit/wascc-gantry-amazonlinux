@@ -1,1 +1,4 @@
-/gantry
+gantry/
+nats-provider/
+redis-provider/
+s3-provider/
