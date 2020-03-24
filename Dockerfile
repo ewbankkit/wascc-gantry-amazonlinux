@@ -24,4 +24,4 @@ COPY --from=builder /usr/src/nats-provider/target/release/libnats_provider.so /a
 COPY --from=builder /usr/src/redis-provider/target/release/libredis_provider.so /app/libredis_provider.so
 COPY --from=builder /usr/src/s3-provider/target/release/libs3_provider.so /app/libs3_provider.so
 
-CMD ["/app/gantry-server", "--catalog", "/app/catalog_s.wasm", "--provider", "/app/libnats_provider.so", "--provider", "/app/libredis_provider.so", "--provider", "/app/libs3_provider.so"]
+ENTRYPOINT ["/app/gantry-server"]
